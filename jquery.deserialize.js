@@ -7,10 +7,10 @@
  * $("form").deserialize(string);
  *
 **/
-$.fn.deserialize = function(s) {
+jQuery.fn.deserialize = function(s) {
   var data = s.split("&");
   for (var i = 0; i < data.length; i++) {
     var pair = decodeURIComponent(data[i]).split("=");
-    $("[name='" + pair[0] + "']", this).val(pair[1]);
+    jQuery("[name='" + pair[0] + "']", this).val(pair[1]);
   }
 };
